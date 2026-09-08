@@ -17,7 +17,7 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#F7F2EC]">
-      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 sm:my-16 md:my-20 lg:my-25">
+      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 mt-20 sm:mt-24 sm:my-16 md:my-20 lg:my-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
           <div className="flex flex-col gap-2">
             <p className="text-2xl sm:text-3xl text-[#756C65]">Hello, I'm</p>

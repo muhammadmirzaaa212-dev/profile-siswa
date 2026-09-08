@@ -7,68 +7,79 @@ import Image from "next/image";
 export default function HomePage() {
   return(
     <div className="min-h-screen bg-[#F7F2EC]">
-      <div className="mx-4 sm:mx-8 md:mx-20 lg:mx-30 my-8 sm:my-12 md:my-20 lg:my-25">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 lg:gap-0">
-          <div className="flex flex-col gap-2 w-full md:w-auto">
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#756C65]">Hello, I'm</p>
-            <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#6F4E37]">Mirza</p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#756C65] max-w-120">
-              A Software Engineering student with a passion for design, technology, and literature. I create, explore, and express ideas through code, visuals, and words.
-            </p>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 mt-4">
-              <Link href={"/projects"}>
-                <button className="px-4 py-1.5 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-700 text-[#76563D] flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto">
-                  <FolderCode size={16}/>
-                  <p className="text-sm">Projects</p>
-                </button>
-              </Link>
-              <Link href={"/about"}>
-                <button className="px-4 py-1.5 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-700 text-[#76563D] flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto">
-                  <User size={16}/>
-                  <p className="text-sm">About</p>
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div className="relative w-full md:w-auto flex justify-center md:justify-end mt-6 md:mt-0">
-            <Image src={"/Mirza2.png"} alt="Mirza2" width={340} height={260} className="w-32 sm:w-40 md:w-52 lg:w-60 h-auto rounded-lg bg-white rotate-3"/>
-            <Image src={"/Mirza1.png"} alt="Mirza1" width={340} height={260} className="w-28 sm:w-36 md:w-48 lg:w-55 h-auto rounded-lg bg-black -rotate-3 absolute top-4 sm:top-6 right-12 sm:right-16 md:right-32 lg:right-40"/>
-          </div>
-        </div>
+      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 mt-20 sm:mt-24 sm:my-16 md:my-20 lg:my-25">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
+                <div className="flex flex-col gap-2">
+                  <p className="text-2xl sm:text-3xl text-[#756C65]">Hello, I'm</p>
+                  <p className="text-5xl sm:text-6xl md:text-7xl text-[#6F4E37]">Mirza</p>
+                  <p className="text-base sm:text-lg md:text-xl text-[#756C65] max-w-full md:max-w-120">
+                    A Software Engineering student with a passion for design,
+                    technology, and literature. I create, explore, and express ideas
+                    through code, visuals, and words.
+                  </p>
+                </div>
+                <div className="relative w-full max-w-130 h-95 sm:h-100 md:h-90 flex justify-center md:block">
+                  <Image src={"/Mirza2.png"} alt="Mirza2" width={340} height={260} className="w-44 sm:w-52 md:w-60 h-64 sm:h-80 md:h-90 rounded-lg bg-white rotate-3"/>
+                  <Image src={"/Mirza1.png"} alt="Mirza1" width={340} height={260} className="w-40 sm:w-48 md:w-55 h-64 sm:h-80 md:h-90 rounded-lg bg-black -rotate-3 absolute top-4 right-1/2 md:right-40 translate-x-1/2 md:translate-x-0"/>
+                </div>
+              </div>
       </div>
-
-      {/* BETWEEN CODE AND WORDS */}
-      <div className="bg-[#B39576] px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 flex flex-col items-center justify-center gap-6 sm:gap-8 relative">
+      <div className="bg-[#B39576] p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-6 md:gap-8 relative">
         <div>
-          <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white">Between Code and Words</p>
+          <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-white">
+            More About Me
+          </p>
         </div>
-        <div className="flex flex-col gap-6 sm:gap-8 max-w-2xl">
-          <p className="text-center text-sm sm:text-base md:text-lg text-white">I am interested in how technology can transform an idea into something tangible. At the same time, I discover another side of myself through design and literature.</p>
-          <Link href="/about" className="flex items-center justify-center gap-1 hover:-translate-y-0.5 transition-all duration-500 group cursor-pointer hover:text-[#F7F2EC]">
-            <p className="text-white text-sm sm:text-base">More About Me</p>
-            <ArrowRight size={16} className="group-hover:translate-x-0.5 duration-300" />
-          </Link>
+        <div className="flex flex-col gap-6 md:gap-8 w-full">
+          <p className="text-center max-w-150 text-base sm:text-lg text-white leading-relaxed">
+            I am interested in how technology can transform an idea into
+            something tangible. At the same time, I discover another side of
+            myself through design and literature.
+          </p>
         </div>
       </div>
-
-      {/* WHAT I DO */}
-      <div className="mx-4 sm:mx-8 md:mx-20 my-12 sm:my-15 md:my-20">
-        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-[#76563D] mb-8 sm:mb-10">What I Do</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          <div className="px-3 sm:px-4 py-6 sm:py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium text-sm sm:text-base">UI/UX Designer</p>
-            <Image src="/UI-UX Designer.png" alt="UI/UX" width={200} height={200} className="w-24 sm:w-32 h-auto" />
-            <p className="text-center text-xs sm:text-sm text-[#6B7280]">Designing interfaces that are simple, clear, and comfortable to use.</p>
+      <div className="mx-6 sm:mx-10 md:mx-14 lg:mx-20 my-12 sm:my-14 md:my-15">
+        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-[#76563D] mb-8 md:mb-10">
+          What I Do
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
+            <p className="text-[#2f2f2f] font-medium">UI/UX Designer</p>
+            <Image
+              src="/UI-UX Designer.png"
+              alt="UI/UX"
+              width={200}
+              height={200}
+            />
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+              Designing interfaces that are simple, clear, and comfortable to
+              use.
+            </p>
           </div>
-          <div className="px-3 sm:px-4 py-6 sm:py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium text-sm sm:text-base">Web Development</p>
-            <Image src="/Web Development.png" alt="Web" width={200} height={200} className="w-24 sm:w-32 h-auto" />
-            <p className="text-center text-xs sm:text-sm text-[#6B7280]">Building websites and turning ideas into functional digital experiences.</p>
+          <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
+            <p className="text-[#2f2f2f] font-medium">Web Development</p>
+            <Image
+              src="/Web Development.png"
+              alt="Web"
+              width={200}
+              height={200}
+            />
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+              Building websites and turning ideas into functional digital
+              experiences.
+            </p>
           </div>
-          <div className="px-3 sm:px-4 py-6 sm:py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium text-sm sm:text-base">Literature</p>
-            <Image src="/Literature.png" alt="Literature" width={200} height={200} className="w-24 sm:w-32 h-auto" />
-            <p className="text-center text-xs sm:text-sm text-[#6B7280]">Exploring ideas and emotions through writing and stories.</p>
+          <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
+            <p className="text-[#2f2f2f] font-medium">Literature</p>
+            <Image
+              src="/Literature.png"
+              alt="Literature"
+              width={200}
+              height={200}
+            />
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+              Exploring ideas and emotions through writing and stories.
+            </p>
           </div>
         </div>
       </div>
