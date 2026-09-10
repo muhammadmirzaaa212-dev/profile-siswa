@@ -21,16 +21,30 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
           <div className="flex flex-col gap-2">
             <p className="text-2xl sm:text-3xl text-[#756C65]">Hello, I'm</p>
-            <p className="text-5xl sm:text-6xl md:text-7xl text-[#6F4E37]">Mirza</p>
+            <p className="text-5xl sm:text-6xl md:text-7xl text-[#6F4E37]">
+              Mirza
+            </p>
             <p className="text-base sm:text-lg md:text-xl text-[#756C65] max-w-full md:max-w-120">
               A Software Engineering student with a passion for design,
               technology, and literature. I create, explore, and express ideas
               through code, visuals, and words.
             </p>
           </div>
-          <div className="relative w-full max-w-130 h-95 sm:h-100 md:h-90 flex justify-center md:block">
-            <Image src={"/Mirza2.png"} alt="Mirza2" width={340} height={260} className="w-44 sm:w-52 md:w-60 h-64 sm:h-80 md:h-90 rounded-lg bg-white rotate-3"/>
-            <Image src={"/Mirza1.png"} alt="Mirza1" width={340} height={260} className="w-40 sm:w-48 md:w-55 h-64 sm:h-80 md:h-90 rounded-lg bg-black -rotate-3 absolute top-4 right-1/2 md:right-40 translate-x-1/2 md:translate-x-0"/>
+          <div className="relative w-full max-w-142 h-95 sm:h-100 md:h-90 flex justify-center">
+            <Image
+              src={"/Mirza2.png"}
+              alt="Mirza1"
+              width={340}
+              height={260}
+              className="w-40 sm:w-48 md:w-55 h-64 sm:h-80 md:h-90 rounded-lg -rotate-3 absolute lg:right-0 right-24 hover:rotate-1 hover:scale-105 transition-all duration-500"
+            />
+            <Image
+              src={"/Mirza1.png"}
+              alt="Mirza2"
+              width={340}
+              height={260}
+              className="w-44 sm:w-52 md:w-60 h-64 sm:h-80 md:h-90 rounded-lg rotate-3 lg:mr-0 md:mr-28 mr-32 hover:rotate-1 hover:scale-105 transition-all duration-500"
+            />
           </div>
         </div>
       </div>
@@ -40,7 +54,7 @@ export default function AboutPage() {
             More About Me
           </p>
         </div>
-        <div className="flex flex-col gap-6 md:gap-8 w-full">
+        <div className="flex flex-col items-center justify-center gap-6 md:gap-8 w-full">
           <p className="text-center max-w-150 text-base sm:text-lg text-white leading-relaxed">
             I am interested in how technology can transform an idea into
             something tangible. At the same time, I discover another side of
@@ -175,8 +189,20 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row lg:flex-col items-center gap-8 md:gap-14">
-            <Image src={"/Mirza3.png"} alt="Mirza3" width={240} height={360} className="w-48 sm:w-56 md:w-60 h-72 sm:h-80 md:h-90 rounded-lg bg-black -rotate-3 mr-0 lg:mr-10"/>
-            <Image src={"/Kelas-Industri.png"} alt="Kelas Industri" width={360} height={240} className="w-64 sm:w-80 md:w-90 h-44 sm:h-52 md:h-60 rounded-lg bg-white rotate-3 ml-0 lg:ml-10"/>
+            <Image
+              src={"/Mirza3.png"}
+              alt="Mirza3"
+              width={240}
+              height={360}
+              className="w-48 sm:w-56 md:w-60 h-72 sm:h-80 md:h-90 rounded-lg -rotate-3 mr-0 lg:mr-10 hover:rotate-1 hover:scale-105 transition-all duration-500"
+            />
+            <Image
+              src={"/Kelas-Industri.png"}
+              alt="Kelas Industri"
+              width={360}
+              height={240}
+              className="w-64 sm:w-80 md:w-90 h-44 sm:h-52 md:h-60 rounded-lg rotate-3 ml-0 lg:ml-10 hover:rotate-1 hover:scale-105 transition-all duration-500"
+            />
           </div>
         </div>
       </div>
@@ -197,7 +223,8 @@ export default function AboutPage() {
               height={200}
             />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              My main tool for creating UI designs, prototypes, and exploring visual ideas.
+              My main tool for creating UI designs, prototypes, and exploring
+              visual ideas.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
@@ -209,7 +236,8 @@ export default function AboutPage() {
               height={200}
             />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              Designing interfaces and experiences with a focus on clarity, usability, and visual consistency.
+              Designing interfaces and experiences with a focus on clarity,
+              usability, and visual consistency.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
@@ -221,7 +249,8 @@ export default function AboutPage() {
               height={200}
             />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              Creating simple layouts to define structure and user flow before visual design.
+              Creating simple layouts to define structure and user flow before
+              visual design.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
@@ -233,7 +262,8 @@ export default function AboutPage() {
               height={200}
             />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              Turning interface ideas into interactive flows to explore how a product works.
+              Turning interface ideas into interactive flows to explore how a
+              product works.
             </p>
           </div>
         </div>
@@ -243,26 +273,18 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
             <p className="text-[#2f2f2f] font-medium">HTML</p>
-            <Image
-              src="/HTML.png"
-              alt="html"
-              width={200}
-              height={200}
-            />
+            <Image src="/HTML.png" alt="html" width={200} height={200} />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              The foundation I use to structure web pages and digital interfaces.
+              The foundation I use to structure web pages and digital
+              interfaces.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
             <p className="text-[#2f2f2f] font-medium">JavaScript</p>
-            <Image
-              src="/Coding-1.png"
-              alt="JS"
-              width={200}
-              height={200}
-            />
+            <Image src="/Coding-1.png" alt="JS" width={200} height={200} />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              I use JavaScript to add interactions and dynamic behavior to websites.
+              I use JavaScript to add interactions and dynamic behavior to
+              websites.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
@@ -274,19 +296,16 @@ export default function AboutPage() {
               height={200}
             />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              A utility-first framework I use to build consistent and responsive interfaces efficiently.
+              A utility-first framework I use to build consistent and responsive
+              interfaces efficiently.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
             <p className="text-[#2f2f2f] font-medium">Python</p>
-            <Image
-              src="/Coding-3.png"
-              alt="Python"
-              width={200}
-              height={200}
-            />
+            <Image src="/Coding-3.png" alt="Python" width={200} height={200} />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
-              A programming language I explore for logic, automation, and problem-solving.
+              A programming language I explore for logic, automation, and
+              problem-solving.
             </p>
           </div>
         </div>

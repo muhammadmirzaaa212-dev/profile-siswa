@@ -24,7 +24,7 @@ export default function ProjectsPage() {
           <p className="text-center font-semibold text-xl md:text-2xl text-[#6F4E37] my-3">
             Web Development
           </p>
-          <div>
+          <div className="hover:-translate-y-0.5 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center w-full max-w-250 p-5 sm:p-6 md:p-8 rounded-lg bg-[#6F4E37]">
               <div className="w-full md:w-[40%] max-w-110 h-52 sm:h-60 bg-white rounded-lg flex shrink-0 items-center justify-center border border-[#E7DED4]">
                 <Image
@@ -35,7 +35,9 @@ export default function ProjectsPage() {
                 />
               </div>
               <div>
-                <p className="text-base sm:text-lg font-semibold">Managemen Magang</p>
+                <p className="text-base sm:text-lg font-semibold">
+                  Managemen Magang
+                </p>
                 <p className="text-sm sm:text-base leading-relaxed">
                   Manajemen Magang is a school-based web application developed
                   as part of the 2025 Software Engineering Industry Class. The
@@ -67,10 +69,12 @@ export default function ProjectsPage() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="hover:-translate-y-0.5 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center w-full max-w-250 p-5 sm:p-6 md:p-8 rounded-lg bg-[#6F4E37]">
               <div className="flex flex-col items-end text-end w-full md:w-[60%]">
-                <p className="text-base sm:text-lg font-semibold">Managemen Siswa</p>
+                <p className="text-base sm:text-lg font-semibold">
+                  Managemen Siswa
+                </p>
                 <p className="text-sm sm:text-base leading-relaxed">
                   Manajemen Siswa is a web application developed as an Industry
                   Class project to help schools record and monitor student
@@ -109,7 +113,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="hover:-translate-y-0.5 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center w-full max-w-250 p-5 sm:p-6 md:p-8 rounded-lg bg-[#6F4E37]">
               <div className="w-full md:w-[40%] max-w-110 h-52 sm:h-60 bg-white rounded-lg flex shrink-0 items-center justify-center border border-[#E7DED4]">
                 <Image
@@ -122,14 +126,14 @@ export default function ProjectsPage() {
               <div>
                 <p className="text-base sm:text-lg font-semibold">SIPESS</p>
                 <p className="text-sm sm:text-base leading-relaxed">
-                  SIPESS is a school facility borrowing platform
-                  developed as an Industry Class project. The platform allows
-                  users to request various school facilities while helping
-                  managers organize borrowing requests based on item categories.
-                  It features three roles: Admin, Manager, and Borrower. Each
-                  facility category has its own manager, so requests are
-                  directed to the appropriate person, such as the manager
-                  responsible for electronic equipment or sports equipment.
+                  SIPESS is a school facility borrowing platform developed as an
+                  Industry Class project. The platform allows users to request
+                  various school facilities while helping managers organize
+                  borrowing requests based on item categories. It features three
+                  roles: Admin, Manager, and Borrower. Each facility category
+                  has its own manager, so requests are directed to the
+                  appropriate person, such as the manager responsible for
+                  electronic equipment or sports equipment.
                 </p>
                 <div className="flex flex-wrap items-center gap-2 my-3">
                   <div className="px-4 py-1 rounded-2xl border border-[#E1D0BC] bg-white text-[#76563D] text-xs">
@@ -156,7 +160,7 @@ export default function ProjectsPage() {
           <p className="text-center font-semibold text-xl md:text-2xl text-[#6F4E37] my-3">
             UI/UX Design
           </p>
-          <div>
+          <div className="hover:-translate-y-0.5 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center w-full max-w-250 p-5 sm:p-6 md:p-8 rounded-lg bg-[#6F4E37]">
               <div className="w-full md:w-[40%] max-w-110 h-52 sm:h-60 bg-white rounded-lg flex shrink-0 items-center justify-center border border-[#E7DED4]">
                 <Image
@@ -167,7 +171,9 @@ export default function ProjectsPage() {
                 />
               </div>
               <div>
-                <p className="text-base sm:text-lg font-semibold">Frezzz News</p>
+                <p className="text-base sm:text-lg font-semibold">
+                  Frezzz News
+                </p>
                 <p className="text-sm sm:text-base leading-relaxed">
                   Frezzz News is a UI design project for a news website created
                   as a school assignment. The project focuses on presenting news
@@ -193,7 +199,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="hover:-translate-y-0.5 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center w-full max-w-250 p-5 sm:p-6 md:p-8 rounded-lg bg-[#6F4E37]">
               <div className="flex flex-col items-end text-end w-full md:w-[60%]">
                 <p className="text-base sm:text-lg font-semibold">Pustaku</p>
@@ -232,7 +238,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="hover:-translate-y-0.5 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center w-full max-w-250 p-5 sm:p-6 md:p-8 rounded-lg bg-[#6F4E37]">
               <div className="w-full md:w-[40%] max-w-110 h-105 sm:h-120 md:h-130 bg-white rounded-lg flex shrink-0 items-center justify-center border border-[#E7DED4]">
                 <Image

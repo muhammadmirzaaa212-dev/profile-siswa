@@ -22,10 +22,10 @@ export default function Topbar() {
           <Link href="/about" className="text-[#29231F]">About</Link>
         </div>
       </div>
-      <div className="px-4 py-1.5 rounded-2xl border border-[#E1D0BC] bg-[#F8F4EF] text-[#76563D] flex items-center justify-center gap-2">
+      <Link href={"/galery"} className="px-4 py-1.5 rounded-2xl border border-[#E1D0BC] bg-[#F8F4EF] text-[#76563D] flex items-center justify-center gap-2">
         <ImageIcon size={16}/>
         <p className="text-sm">Galery</p>
-      </div>
+      </Link>
     </header>
   )
 }
