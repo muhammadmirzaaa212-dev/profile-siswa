@@ -325,10 +325,6 @@ export default function AboutPage() {
               <p className="text-sm break-all">muhammadmirzaaa@gmail.com</p>
             </div>
             <div className="flex items-center gap-2">
-              <PhoneIcon size={16} />
-              <p className="text-sm">+62 878 6192 7727</p>
-            </div>
-            <div className="flex items-center gap-2">
               <MapPinIcon size={16} />
               <p className="text-sm">Pasuruan, Jawa Timur, Indonesia</p>
             </div>

@@ -15,8 +15,8 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#F7F2EC]">
-      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 mt-20 sm:mt-24 sm:my-16 md:my-20 lg:my-25">
+    <div className="min-h-screen bg-cream">
+      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 sm:my-16 md:my-20 lg:my-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
           <div className="flex flex-col gap-2">
             <p className="text-2xl sm:text-3xl text-[#756C65]">Hello, I'm</p>
@@ -28,15 +28,15 @@ export default function HomePage() {
               technology, and literature. I create, explore, and express ideas
               through code, visuals, and words.
             </p>
-            <div className="flex items-center gap-2 mt-4">
+            <div className="flex items-center gap-4 mt-4">
               <Link href={"/projects"}>
-                <button className="px-4 py-1.5 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-500 text-[#76563D] flex items-center justify-center gap-2 cursor-pointer">
+                <button className="px-5 py-2 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-500 text-[#76563D] flex items-center justify-center gap-2 cursor-pointer">
                   <FolderCode size={16} />
                   <p className="text-sm">Projects</p>
                 </button>
               </Link>
               <Link href={"/about"}>
-                <button className="px-4 py-1.5 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-500 text-[#76563D] flex items-center justify-center gap-2 cursor-pointer">
+                <button className="px-5 py-2 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-500 text-[#76563D] flex items-center justify-center gap-2 cursor-pointer">
                   <User size={16} /> <p className="text-sm">About</p>
                 </button>
               </Link>
@@ -279,10 +279,6 @@ export default function HomePage() {
               <p className="text-xs sm:text-sm break-all">
                 muhammadmirzaaa@gmail.com
               </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <PhoneIcon size={16} />
-              <p className="text-xs sm:text-sm">+62 878 6192 7727</p>
             </div>
             <div className="flex items-center gap-2">
               <MapPinIcon size={16} />

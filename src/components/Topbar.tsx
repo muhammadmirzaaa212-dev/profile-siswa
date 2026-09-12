@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function Topbar() {
   const pathname = usePathname();
   return(
-    <header className="w-full px-6 py-3 shadow-sm flex items-center justify-between bg-white fixed z-50">
+    <header className="w-full sticky top-0 px-6 py-3 shadow-sm flex items-center justify-between bg-white z-50">
       <div className="p-1.5 rounded-lg text-white bg-[#76563D]">
         MM
       </div>
-      <div className="flex gap-5 font-medium">
+      <div className="flex gap-6 font-sans">
         <div className="flex flex-col items-center justify-center">
           <Link href="/" className="text-[#29231F]">Home</Link>
         </div>
