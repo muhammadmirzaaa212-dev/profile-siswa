@@ -16,7 +16,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#F7F2EC]">
+    <div className="min-h-screen bg-cream-100">
       <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 mt-20 sm:mt-24 sm:my-16 md:my-20 lg:my-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
           <div className="flex flex-col gap-2">
@@ -48,19 +48,19 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="bg-[#B39576] p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-6 md:gap-8 relative">
+      <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-6 md:gap-8 relative">
         <div>
-          <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-white">
+          <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-brwon-600">
             More About Me
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-6 md:gap-8 w-full">
-          <p className="text-center max-w-150 text-base sm:text-lg text-white leading-relaxed">
+          <p className="text-center max-w-150 text-base sm:text-lg text-brown-600 leading-relaxed">
             I am interested in how technology can transform an idea into
             something tangible. At the same time, I discover another side of
             myself through design and literature.
           </p>
-          <p className="text-center max-w-150 text-base sm:text-lg text-white leading-relaxed">
+          <p className="text-center max-w-150 text-base sm:text-lg text-brown-600 leading-relaxed">
             I enjoy turning ideas into interfaces, experimenting with visual
             details, and finding ways to make digital experiences feel simple
             and meaningful. Outside of technology, literature gives me another
@@ -74,7 +74,7 @@ export default function AboutPage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">UI/UX Designer</p>
+            <p className="text-charcoal-900 font-medium">UI/UX Designer</p>
             <Image
               src="/UI-UX Designer.png"
               alt="UI/UX"
@@ -87,7 +87,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Web Development</p>
+            <p className="text-charcoal-900 font-medium">Web Development</p>
             <Image
               src="/Web Development.png"
               alt="Web"
@@ -100,7 +100,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Literature</p>
+            <p className="text-charcoal-900 font-medium">Literature</p>
             <Image
               src="/Literature.png"
               alt="Literature"
@@ -113,8 +113,8 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="bg-[#B39576] p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-8 md:gap-10">
-        <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-white">
+      <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-8 md:gap-10">
+        <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-brown-600">
           My Journey
         </p>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 w-full max-w-250">
@@ -215,7 +215,7 @@ export default function AboutPage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Figma</p>
+            <p className="text-charcoal-900 font-medium">Figma</p>
             <Image
               src="/UI-UX Designer.png"
               alt="UI/UX"
@@ -228,7 +228,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">UI Design</p>
+            <p className="text-charcoal-900 font-medium">UI Design</p>
             <Image
               src="/Web Development.png"
               alt="Web"
@@ -241,7 +241,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Wireframing</p>
+            <p className="text-charcoal-900 font-medium">Wireframing</p>
             <Image
               src="/Coding-2.png"
               alt="Wireframing"
@@ -254,7 +254,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Prototyping</p>
+            <p className="text-charcoal-900 font-medium">Prototyping</p>
             <Image
               src="/Prototyping.png"
               alt="Prototyping"
@@ -272,7 +272,7 @@ export default function AboutPage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">HTML</p>
+            <p className="text-charcoal-900 font-medium">HTML</p>
             <Image src="/HTML.png" alt="html" width={200} height={200} />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
               The foundation I use to structure web pages and digital
@@ -280,7 +280,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">JavaScript</p>
+            <p className="text-charcoal-900 font-medium">JavaScript</p>
             <Image src="/Coding-1.png" alt="JS" width={200} height={200} />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
               I use JavaScript to add interactions and dynamic behavior to
@@ -288,7 +288,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Tailwind CSS</p>
+            <p className="text-charcoal-900 font-medium">Tailwind CSS</p>
             <Image
               src="/Tailwind.png"
               alt="Tailwind"
@@ -301,7 +301,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-[#2f2f2f] font-medium">Python</p>
+            <p className="text-charcoal-900 font-medium">Python</p>
             <Image src="/Coding-3.png" alt="Python" width={200} height={200} />
             <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
               A programming language I explore for logic, automation, and
