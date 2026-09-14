@@ -22,11 +22,11 @@ Fitur styling tambahan yang diimplementasikan:
 `ProjectCard.tsx` : Komponen kartu untuk menampilkan preview project (judul, kategori, deskripsi, gambar)
 `Topbar.tsx` : Komponen navigasi utama (navbar)
 
-## Rute Dinamis: `/projects/[id]`
+## Rute Dinamis: `/projects/[slug]`
 
-Halaman detail project menggunakan *dynamic routing* Next.js App Router di `src/app/(site)/projects/[id]/page.tsx`. Setiap project memiliki halaman detail sendiri yang diakses lewat parameter `id` di URL (contoh: `/projects/1`, `/projects/2`).
+Halaman detail project menggunakan *dynamic routing* Next.js App Router di `src/app/(site)/projects/[slug]/page.tsx`. Setiap project memiliki halaman detail sendiri yang diakses lewat parameter `slug` di URL (contoh: `/projects/manajemen-magang`, `/projects/pustaku`).
 
-Data project diambil dari `src/data/proyek.ts` dan di-render sesuai `id` yang diakses. Halaman daftar project (`/projects`) juga mendukung filter kategori lewat query parameter.
+Data project diambil dari `src/data/proyek.ts` dan di-render sesuai `slug` yang diakses. Halaman daftar project (`/projects`) juga mendukung filter kategori lewat query parameter.
 
 ## Tools
 

@@ -5,13 +5,13 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { daftarProyek } from "@/data/proyek";
 
 interface DetailProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export default async function DetailProyekPage({ params }: DetailProps) {
-  const { id } = await params;
+  const { slug } = await params;
 
-  const proyek = daftarProyek.find((p) => p.id === id);
+  const proyek = daftarProyek.find((p) => p.slug === slug);
 
   if (!proyek) {
     notFound();
@@ -39,7 +39,7 @@ export default async function DetailProyekPage({ params }: DetailProps) {
             </span>
             <span className="h-1 w-1 rounded-full bg-brown-300" />
             <span className="text-xs font-mono text-stone-400">
-              #{id}
+              #{proyek.id}
             </span>
           </div>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-stone-800 sm:text-5xl md:text-6xl">
@@ -76,15 +76,7 @@ export default async function DetailProyekPage({ params }: DetailProps) {
               {proyek.tools.map((tool) => (
                 <span
                   key={tool}
-                  className="
-                    rounded-full
-                    border border-brown-200
-                    bg-cream-100
-                    px-3 py-1.5
-                    text-xs
-                    font-medium
-                    text-brown-700
-                  "
+                  className="rounded-full border border-brown-200 bg-cream-100 px-3 py-1.5 text-xs font-medium text-brown-700"
                 >
                   {tool}
                 </span>
@@ -94,26 +86,11 @@ export default async function DetailProyekPage({ params }: DetailProps) {
         </div>
         <div className="flex flex-col gap-4 border-t border-brown-200 bg-cream-100 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 md:px-14">
           <p className="text-xs text-stone-500">
-            Project #{id}
+            Project #{proyek.id}
           </p>
           <Link
             href="/projects"
-            className="
-              inline-flex
-              items-center
-              justify-center
-              gap-2
-              rounded-full
-              bg-brown-600
-              px-5 py-2.5
-              text-sm
-              font-medium
-              text-white
-              transition-all
-              duration-300
-              hover:-translate-y-0.5
-              hover:bg-brown-700
-            "
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-brown-600 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brown-700"
           >
             More Projects
             <ExternalLink size={15} />

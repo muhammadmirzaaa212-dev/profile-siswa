@@ -192,6 +192,7 @@ export default function HomePage() {
           >
             <ProjectCard
               id="1"
+              slug="manajemen-magang"
               title="Manajemen Magang"
               category="Web Development"
               description="Manajemen Magang is a school-based web application developed as
@@ -215,6 +216,7 @@ export default function HomePage() {
             <ProjectCard
               id="2"
               title="Pustaku"
+              slug="pustaku"
               category="UI Design"
               description="Pustaku is a library platform concept designed to connect
                 readers with registered libraries across Indonesia. Users can

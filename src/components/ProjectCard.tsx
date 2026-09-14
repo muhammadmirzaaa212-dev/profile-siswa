@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 interface ProjectCardProps {
   id: string;
+  slug: string;
   title: string;
   category: string;
   description: string;
@@ -15,6 +16,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({
   id,
+  slug,
   title,
   category,
   description,
@@ -53,7 +55,7 @@ export default function ProjectCard({
           ))}
         </div>
         <div className={`mt-5 ${pathname == '/' ? 'hidden' : 'block'}`}>
-          <Link href={`/projects/${id}`} className="text-sm font-medium text-brown-700 transition-colors hover:text-brown-900">
+          <Link href={`/projects/${slug}`} className="text-sm font-medium text-brown-700 transition-colors hover:text-brown-900">
             View Project &rarr;
           </Link>
         </div>
