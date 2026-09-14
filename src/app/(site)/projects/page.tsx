@@ -5,7 +5,6 @@ import {
   MapPinIcon,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { daftarProyek } from "@/data/proyek";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -19,17 +18,17 @@ export default async function ProjectsPage({searchParams}: ProjectPageProps) {
     ? daftarProyek.filter((p) => p.category.toLowerCase() === category.toLowerCase())
     : daftarProyek;
 
-  const categories = ['Semua', 'Web', 'UI/UX Design', 'IoT']
+  const categories = ['All', 'Web', 'UI/UX Design', 'IoT']
 
   return (
     <div className="min-h-screen bg-cream-100">
       <div className="p-6 sm:p-8 md:p-10 lg:p-20 flex flex-col items-center justify-center gap-8 md:gap-10">
-        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-[#6F4E37] my-3">
+        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 my-3">
           Some things I've built and designed.
         </p>
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => {
-            const isAll = cat === 'Semua';
+            const isAll = cat === 'All';
             const href = isAll ? '/projects' : `/projects?category=${cat.toLowerCase()}`;
             const isActive = isAll ? !category : category?.toLowerCase() === cat.toLowerCase();
             return(
