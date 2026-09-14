@@ -17,50 +17,46 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-cream-100">
-      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 mt-20 sm:mt-24 sm:my-16 md:my-20 lg:my-25">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
-          <div className="flex flex-col gap-2">
-            <p className="text-2xl sm:text-3xl text-[#756C65]">Hello, I'm</p>
-            <p className="text-5xl sm:text-6xl md:text-7xl text-[#6F4E37]">
+      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 sm:my-16 md:my-20 lg:my-25">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-10">
+          <div>
+            <p className="text-2xl sm:text-3xl text-charcoal-500">Hello, I'm</p>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl text-charcoal-900 leading-tight tracking-wider">
               Mirza
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-[#756C65] max-w-full md:max-w-120">
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-charcoal-500 leading-relaxed max-w-xl">
               A Software Engineering student with a passion for design,
               technology, and literature. I create, explore, and express ideas
               through code, visuals, and words.
             </p>
           </div>
-          <div className="relative w-full max-w-142 h-95 sm:h-100 md:h-90 flex justify-center">
+          <div>
             <Image
-              src={"/Mirza2.png"}
-              alt="Mirza1"
-              width={340}
-              height={260}
-              className="w-40 sm:w-48 md:w-55 h-64 sm:h-80 md:h-90 rounded-lg -rotate-3 absolute lg:right-0 right-24 hover:rotate-1 hover:scale-105 transition-all duration-500"
-            />
-            <Image
-              src={"/Mirza1.png"}
-              alt="Mirza2"
-              width={340}
-              height={260}
-              className="w-44 sm:w-52 md:w-60 h-64 sm:h-80 md:h-90 rounded-lg rotate-3 lg:mr-0 md:mr-28 mr-32 hover:rotate-1 hover:scale-105 transition-all duration-500"
+              src="/Mirza1.png"
+              alt="Mirza"
+              width={350}
+              height={420}
+              className="relative z-10 w-52 sm:w-60 md:w-64 lg:w-72 h-72 sm:h-80 md:h-96 lg:h-105 object-cover rounded-xl rotate-3 hover:rotate-1 hover:scale-105 transition-all duration-500 shadow-sm"
             />
           </div>
         </div>
       </div>
-      <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-6 md:gap-8 relative">
-        <div>
-          <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-brwon-600">
-            More About Me
+      <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-8 md:gap-10">
+        <div className="text-center">
+          <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-charcoal-500 mb-2">
+            More
+          </p>
+          <p className="font-semibold text-3xl sm:text-4xl md:text-5xl text-charcoal-900">
+            About Me
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-6 md:gap-8 w-full">
-          <p className="text-center max-w-150 text-base sm:text-lg text-brown-600 leading-relaxed">
+          <p className="text-center max-w-150 text-base sm:text-lg text-charcoal-600 leading-relaxed">
             I am interested in how technology can transform an idea into
             something tangible. At the same time, I discover another side of
             myself through design and literature.
           </p>
-          <p className="text-center max-w-150 text-base sm:text-lg text-brown-600 leading-relaxed">
+          <p className="text-center max-w-150 text-base sm:text-lg text-charcoal-600 leading-relaxed">
             I enjoy turning ideas into interfaces, experimenting with visual
             details, and finding ways to make digital experiences feel simple
             and meaningful. Outside of technology, literature gives me another
@@ -69,241 +65,277 @@ export default function AboutPage() {
         </div>
       </div>
       <div className="mx-6 sm:mx-10 md:mx-14 lg:mx-20 my-12 sm:my-14 md:my-15">
-        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-[#76563D] mb-8 md:mb-10">
+        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 mb-8 md:mb-10">
           What I Do
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">UI/UX Designer</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              UI/UX Designer
+            </p>
             <Image
               src="/UI-UX Designer.png"
               alt="UI/UX"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Designing interfaces that are simple, clear, and comfortable to
               use.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Web Development</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              Web Development
+            </p>
             <Image
               src="/Web Development.png"
               alt="Web"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Building websites and turning ideas into functional digital
               experiences.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Literature</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              Literature
+            </p>
             <Image
               src="/Literature.png"
               alt="Literature"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Exploring ideas and emotions through writing and stories.
             </p>
           </div>
         </div>
       </div>
-      <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-8 md:gap-10">
-        <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-brown-600">
-          My Journey
-        </p>
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 w-full max-w-250">
-          <div>
-            <div className="flex gap-3 sm:gap-4">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-[#6F4E37] mt-1 shrink-0 border-3 border-white" />
-                <div className="w-0.5 flex-1 mt-1 bg-white" />
-              </div>
-              <div className="flex flex-col gap-2 max-w-full lg:max-w-100">
-                <p className="text-white text-lg font-medium">
-                  The beginnings of an interest in literature
-                </p>
-                <div className="text-xs text-white flex items-center gap-1">
-                  <CalendarIcon size={13} />
-                  <p>2025</p>
-                </div>
-                <p className="mb-4">
-                  My journey began with an interest in literature. I first
-                  discovered it through BUMI, a novel series by Tere Liye. After
-                  reading several books in the series, I became curious about
-                  how someone could turn words into beautiful stories, build
-                  imagination, and create sentences that feel connected to real
-                  life.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-3 sm:gap-4">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-[#6F4E37] mt-1 shrink-0 border-3 border-white" />
-                <div className="w-0.5 flex-1 mt-1 bg-white" />
-              </div>
-              <div className="flex flex-col gap-2 max-w-full lg:max-w-100">
-                <p className="text-white text-lg font-medium">
-                  The beginnings of an interest in technology
-                </p>
-                <div className="text-xs text-white flex items-center gap-1">
-                  <CalendarIcon size={13} />
-                  <p>2025</p>
-                </div>
-                <p className="mb-4">
-                  That curiosity eventually led me to technology. While playing
-                  games like Mobile Legends, I started wondering how a game
-                  could run smoothly and how its systems worked. I had similar
-                  curiosity when using applications like NovelToon. This led me
-                  to explore technology further and eventually choose Software
-                  Engineering as the field I wanted to study.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-3 sm:gap-4">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-[#6F4E37] mt-1 shrink-0 border-3 border-white" />
-              </div>
-              <div className="flex flex-col gap-2 max-w-full lg:max-w-100">
-                <p className="text-white text-lg font-medium">
-                  The beginnings of an interest in UI/UX Design
-                </p>
-                <div className="text-xs text-white flex items-center gap-1">
-                  <CalendarIcon size={13} />
-                  <p>2026</p>
-                </div>
-                <p>
-                  After discovering technology, I developed an interest in
-                  design. I realized that knowing how to code was not enough to
-                  make a product feel complete. To me, design plays an important
-                  role in communicating ideas and shaping user experiences. From
-                  there, I started exploring UI/UX and learning how visuals,
-                  layouts, and colors can bring an idea to life.
-                </p>
-              </div>
-            </div>
+      <div className="bg-cream-200 px-6 py-12 sm:px-10 sm:py-14 md:px-14 md:py-20 lg:px-20">
+        <div className="flex flex-col items-center gap-10 md:gap-14">
+          <div className="text-center">
+            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-charcoal-500 mb-2">
+              A little story
+            </p>
+            <p className="font-semibold text-3xl sm:text-4xl md:text-5xl text-charcoal-900">
+              My Journey
+            </p>
           </div>
-          <div className="flex flex-col sm:flex-row lg:flex-col items-center gap-8 md:gap-14">
-            <Image
-              src={"/Mirza3.png"}
-              alt="Mirza3"
-              width={240}
-              height={360}
-              className="w-48 sm:w-56 md:w-60 h-72 sm:h-80 md:h-90 rounded-lg -rotate-3 mr-0 lg:mr-10 hover:rotate-1 hover:scale-105 transition-all duration-500"
-            />
-            <Image
-              src={"/Kelas-Industri.png"}
-              alt="Kelas Industri"
-              width={360}
-              height={240}
-              className="w-64 sm:w-80 md:w-90 h-44 sm:h-52 md:h-60 rounded-lg rotate-3 ml-0 lg:ml-10 hover:rotate-1 hover:scale-105 transition-all duration-500"
-            />
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full max-w-250">
+            <div className="w-full lg:max-w-115">
+              <div className="flex gap-4 sm:gap-5">
+                <div className="flex flex-col items-center">
+                  <div className="w-3.5 h-3.5 rounded-full bg-brown-600 mt-1 shrink-0 ring-4 ring-cream-300" />
+                  <div className="w-px flex-1 mt-2 bg-brown-300" />
+                </div>
+                <div className="flex flex-col gap-2 pb-8">
+                  <p className="text-charcoal-800 text-lg font-semibold leading-snug">
+                    The beginnings of an interest in literature
+                  </p>
+                  <div className="text-xs text-brown-500 flex items-center gap-2">
+                    <CalendarIcon size={13} />
+                    <p>2025</p>
+                  </div>
+                  <p className="text-sm sm:text-base leading-7 text-charcoal-600">
+                    My journey began with an interest in literature. I first
+                    discovered it through BUMI, a novel series by Tere Liye.
+                    After reading several books in the series, I became curious
+                    about how someone could turn words into beautiful stories,
+                    build imagination, and create sentences that feel connected
+                    to real life.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 sm:gap-5">
+                <div className="flex flex-col items-center">
+                  <div className="w-3.5 h-3.5 rounded-full bg-brown-600 mt-1 shrink-0 ring-4 ring-cream-300" />
+                  <div className="w-px flex-1 mt-2 bg-brown-300" />
+                </div>
+                <div className="flex flex-col gap-2 pb-8">
+                  <p className="text-charcoal-900 text-lg font-semibold leading-snug">
+                    The beginnings of an interest in technology
+                  </p>
+                  <div className="text-xs text-brown-500 flex items-center gap-2">
+                    <CalendarIcon size={13} />
+                    <p>2025</p>
+                  </div>
+                  <p className="text-sm sm:text-base leading-7 text-charcoal-600">
+                    That curiosity eventually led me to technology. While
+                    playing games like Mobile Legends, I started wondering how a
+                    game could run smoothly and how its systems worked. I had
+                    similar curiosity when using applications like NovelToon.
+                    This led me to explore technology further and eventually
+                    choose Software Engineering as the field I wanted to study.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 sm:gap-5">
+                <div className="flex flex-col items-center">
+                  <div className="w-3.5 h-3.5 rounded-full bg-brown-600 mt-1 shrink-0 ring-4 ring-cream-300" />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <p className="text-charcoal-900 text-lg font-semibold leading-snug">
+                    The beginnings of an interest in UI/UX Design
+                  </p>
+                  <div className="text-xs text-brown-500 flex items-center gap-2">
+                    <CalendarIcon size={13} />
+                    <p>2026</p>
+                  </div>
+                  <p className="text-sm sm:text-base leading-7 text-charcoal-600">
+                    After discovering technology, I developed an interest in
+                    design. I realized that knowing how to code was not enough
+                    to make a product feel complete. To me, design plays an
+                    important role in communicating ideas and shaping user
+                    experiences. From there, I started exploring UI/UX and
+                    learning how visuals, layouts, and colors can bring an idea
+                    to life.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative flex flex-col sm:flex-row lg:flex-col items-center gap-8 md:gap-12">
+              <div className="relative">
+                <Image
+                  src="/Mirza3.png"
+                  alt="Mirza"
+                  width={240}
+                  height={360}
+                  className="w-48 sm:w-56 md:w-60 h-72 sm:h-80 md:h-90 rounded-xl object-cover -rotate-3 shadow-sm hover:rotate-1 hover:scale-105 transition-all duration-500"
+                />
+                <span className="absolute -bottom-3 -left-3 px-3 py-1 rounded-full bg-cream-50 border border-brown-200 text-[10px] uppercase tracking-wider text-brown-500">
+                  2025
+                </span>
+              </div>
+              <div className="relative lg:ml-10">
+                <Image
+                  src="/Kelas-Industri.png"
+                  alt="Kelas Industri"
+                  width={360}
+                  height={240}
+                  className="w-64 sm:w-80 md:w-90 h-44 sm:h-52 md:h-60 rounded-xl object-cover rotate-3 shadow-sm hover:rotate-1 hover:scale-105 transition-all duration-500"
+                />
+                <span className="absolute -bottom-3 -right-3 px-3 py-1 rounded-full bg-cream-50 border border-brown-200 text-[10px] uppercase tracking-wider text-brown-500">
+                  2025
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="mx-6 sm:mx-10 md:mx-14 lg:mx-20 my-12 sm:my-14 md:my-15">
-        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-[#76563D] mb-8 md:mb-10">
+        <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 mb-8 md:mb-10">
           Skill and Tools
         </p>
-        <p className="text-center font-semibold text-xl sm:text-2xl text-[#76563D] mb-8 md:mb-10">
+        <p className="text-center font-medium text-lg sm:text-xl text-charcoal-600 mb-8 md:mb-10 tracking-[0.2rem]">
           Design
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Figma</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">Figma</p>
             <Image
               src="/UI-UX Designer.png"
               alt="UI/UX"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               My main tool for creating UI designs, prototypes, and exploring
               visual ideas.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">UI Design</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              UI Design
+            </p>
             <Image
               src="/Web Development.png"
               alt="Web"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Designing interfaces and experiences with a focus on clarity,
               usability, and visual consistency.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Wireframing</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              Wireframing
+            </p>
             <Image
               src="/Coding-2.png"
               alt="Wireframing"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Creating simple layouts to define structure and user flow before
               visual design.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Prototyping</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              Prototyping
+            </p>
             <Image
               src="/Prototyping.png"
               alt="Prototyping"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Turning interface ideas into interactive flows to explore how a
               product works.
             </p>
           </div>
         </div>
-        <p className="text-center font-semibold text-xl sm:text-2xl text-[#76563D] mb-8 md:mb-10 mt-12 md:mt-15">
+        <p className="text-center font-medium text-lg sm:text-xl text-charcoal-600 mb-8 md:mb-10 mt-12 md:mt-15 tracking-[0.2rem]">
           Development
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">HTML</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">HTML</p>
             <Image src="/HTML.png" alt="html" width={200} height={200} />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               The foundation I use to structure web pages and digital
               interfaces.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">JavaScript</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              JavaScript
+            </p>
             <Image src="/Coding-1.png" alt="JS" width={200} height={200} />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               I use JavaScript to add interactions and dynamic behavior to
               websites.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Tailwind CSS</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              Tailwind CSS
+            </p>
             <Image
               src="/Tailwind.png"
               alt="Tailwind"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               A utility-first framework I use to build consistent and responsive
               interfaces efficiently.
             </p>
           </div>
           <div className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500">
-            <p className="text-charcoal-900 font-medium">Python</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">
+              Python
+            </p>
             <Image src="/Coding-3.png" alt="Python" width={200} height={200} />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               A programming language I explore for logic, automation, and
               problem-solving.
             </p>
@@ -315,7 +347,7 @@ export default function AboutPage() {
           Let's create something meaningful.
         </p>
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
-          <div className="p-1.5 rounded-lg bg-white text-[#76563D] text-xl">
+          <div className="p-1.5 rounded-lg bg-white text-brown-600 text-xl">
             MM
           </div>
           <div className="flex flex-col gap-2 text-white w-full sm:w-auto">
