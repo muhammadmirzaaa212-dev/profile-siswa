@@ -47,17 +47,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-4 mt-4">
               <Link
                 href="/projects"
-                className="
-                  px-5 py-2.5
-                  rounded-2xl
-                  border border-[#E1D0BC]
-                  bg-[#EFE5D8]
-                  hover:bg-[#E1D0BC]
-                  hover:-translate-y-0.5
-                  transition-all duration-300
-                  text-[#76563D]
-                  flex items-center justify-center gap-2
-                "
+                className="px-5 py-2.5 rounded-2xl bg-brown-600 hover:bg-brown-700 hover:-translate-y-0.5 transition-all duration-300 text-white flex items-center justify-center gap-2"
               >
                 <FolderCode size={16} />
                 <span className="text-sm">Projects</span>
@@ -65,17 +55,7 @@ export default function HomePage() {
 
               <Link
                 href="/about"
-                className="
-                  px-5 py-2.5
-                  rounded-2xl
-                  border border-[#E1D0BC]
-                  bg-[#EFE5D8]
-                  hover:bg-[#E1D0BC]
-                  hover:-translate-y-0.5
-                  transition-all duration-300
-                  text-[#76563D]
-                  flex items-center justify-center gap-2
-                "
+                className=" px-5 py-2.5 rounded-2xl bg-brown-600 hover:bg-brown-700 hover:-translate-y-0.5 transition-all duration-300 text-white flex items-center justify-center gap-2"
               >
                 <User size={16} />
                 <span className="text-sm">About</span>
@@ -92,41 +72,33 @@ export default function HomePage() {
               alt="Mirza"
               width={350}
               height={420}
-              className="
-                relative
-                z-10
-                w-52 sm:w-60 md:w-64 lg:w-72
-                h-72 sm:h-80 md:h-96 lg:h-105
-                object-cover
-                rounded-xl
-                rotate-3
-                hover:rotate-1
-                hover:scale-105
-                transition-all duration-500
-                shadow-sm
-              "
+              className="relative z-10 w-52 sm:w-60 md:w-64 lg:w-72 h-72 sm:h-80 md:h-96 lg:h-105 object-cover rounded-xl rotate-3 hover:rotate-1 hover:scale-105 transition-all duration-500 shadow-sm"
             />
           </div>
         </div>
       </div>
-
       <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-6 md:gap-8 border relative">
         <div
           ref={betweenRef}
           className={`flex flex-col items-center gap-6 md:gap-8 transition-all duration-700 ease-out
             ${betweenInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <p className="text-center font-semibold text-3xl sm:text-4xl md:text-5xl text-brown-600">
-            Between Code And Words
-          </p>
-          <p className="text-center max-w-150 text-base sm:text-lg text-brown-600 leading-relaxed">
+          <div className="text-center">
+            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-charcoal-500 mb-2">
+              Between
+            </p>
+            <p className="font-semibold text-3xl sm:text-4xl md:text-5xl text-charcoal-900">
+              Code and Words
+            </p>
+          </div>
+          <p className="text-center max-w-150 text-base sm:text-lg text-charcoal-600 leading-relaxed">
             I am interested in how technology can transform an idea into
             something tangible. At the same time, I discover another side of
             myself through design and literature.
           </p>
           <Link
             href="/about"
-            className="mt-4 flex items-center justify-center gap-1 hover:-translate-y-0.5 transition-all duration-500 group cursor-pointer text-brown-600"
+            className="mt-4 flex items-center justify-center gap-1 hover:-translate-y-0.5 transition-all duration-500 group cursor-pointer text-charcoal-800"
           >
             <p className="text-sm sm:text-base">More About Me</p>
             <ArrowRight
@@ -136,11 +108,10 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-
       <div className="mx-6 sm:mx-10 md:mx-14 lg:mx-20 my-12 sm:my-14 md:my-15">
         <p
           ref={whatIDoTitleRef}
-          className={`text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-[#76563D] mb-8 md:mb-10 transition-all duration-700 ease-out
+          className={`text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 mb-8 md:mb-10 transition-all duration-700 ease-out
             ${whatIDoTitleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           What I Do
@@ -151,14 +122,14 @@ export default function HomePage() {
             className={`px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-700 ease-out
               ${card1InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <p className="text-charcoal-900 font-medium">UI/UX Designer</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">UI/UX Designer</p>
             <Image
               src="/UI-UX Designer.png"
               alt="UI/UX"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Designing interfaces that are simple, clear, and comfortable to
               use.
             </p>
@@ -168,14 +139,14 @@ export default function HomePage() {
             className={`px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-700 ease-out delay-150
               ${card2InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <p className="text-charcoal-900 font-medium">Web Development</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">Web Development</p>
             <Image
               src="/Web Development.png"
               alt="Web"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Building websites and turning ideas into functional digital
               experiences.
             </p>
@@ -185,28 +156,34 @@ export default function HomePage() {
             className={`px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-700 ease-out delay-300
               ${card3InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <p className="text-charcoal-900 font-medium">Literature</p>
+            <p className="text-charcoal-900 font-medium tracking-wide">Literature</p>
             <Image
               src="/Literature.png"
               alt="Literature"
               width={200}
               height={200}
             />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-[#6B7280]">
+            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
               Exploring ideas and emotions through writing and stories.
             </p>
           </div>
         </div>
       </div>
-
       <div className="bg-cream-200 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 flex flex-col items-center justify-center gap-8 sm:gap-10">
-        <p
+        <div
           ref={projectsTitleRef}
-          className={`text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-brown-600 mb-4 transition-all duration-700 ease-out
+          className={`text-center mb-4 transition-all duration-700 ease-out
             ${projectsTitleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          Projects
-        </p>
+          <div className="text-center">
+            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-charcoal-500 mb-2">
+              My
+            </p>
+            <p className="font-semibold text-3xl sm:text-4xl md:text-5xl text-charcoal-900">
+              Projects
+            </p>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div
             ref={project1Ref}
@@ -254,7 +231,7 @@ export default function HomePage() {
         </div>
         <Link
           href="/projects"
-          className="mt-4 flex items-center justify-center gap-1 hover:-translate-y-0.5 transition-all duration-500 group cursor-pointer text-brown-600"
+          className="mt-4 flex items-center justify-center gap-1 hover:-translate-y-0.5 transition-all duration-500 group cursor-pointer text-charcoal-700"
         >
           <p className="text-sm sm:text-base">More Project</p>
           <ArrowRight
@@ -275,7 +252,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="flex flex-col gap-6 sm:gap-8 max-w-2xl">
-          <p className="text-center text-base sm:text-lg md:text-xl text-[#6B7280]">
+          <p className="text-center text-base sm:text-lg md:text-xl text-charcoal-600">
             I believe every idea starts somewhere. Mine usually starts with
             curiosity.
           </p>
