@@ -5,18 +5,33 @@ import {
   MapPinIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { daftarProyek } from "@/data/proyek";
+import { supabase } from "../../../../lib/supabase";
 import ProjectCard from "@/components/ProjectCard";
 
 interface ProjectPageProps {
-  searchParams: Promise<{ category?: string }>
+  searchParams: Promise<{ category?: string, query?: string }>
 }
 
 export default async function ProjectsPage({searchParams}: ProjectPageProps) {
-  const { category } = await searchParams;
-  const filtered = category
+  const { data: daftarProyek, error } = await supabase
+    .from('projects')
+    .select('*')
+    .order('id', {ascending: true});
+
+  if (error) {
+    return <p className="text-red-600">Gagal memuat data: {error.message}</p>;
+  }
+
+  const { category, query } = await searchParams;
+  let filtered = category
     ? daftarProyek.filter((p) => p.category.toLowerCase() === category.toLowerCase())
     : daftarProyek;
+
+  if (query) {
+    filtered = filtered.filter((p) =>
+      p.title.toLowerCase().includes(query.toLowerCase())
+    );
+  }
 
   const categories = ['All', 'Web', 'UI/UX Design', 'IoT']
 
@@ -26,6 +41,16 @@ export default async function ProjectsPage({searchParams}: ProjectPageProps) {
         <p className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 my-3">
           Some things I've built and designed.
         </p>
+        <form method="GET" action="/projects" className="w-full max-w-md">
+          {category && <input type="hidden" name="category" value={category} />}
+          <input
+            type="text"
+            name="query"
+            defaultValue={query ?? ""}
+            placeholder="Search projects..."
+            className="w-full px-4 py-2 rounded-lg border border-brown-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brown-400 text-charcoal-700 placeholder:text-charcoal-500"
+          />
+        </form>
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => {
             const isAll = cat === 'All';
@@ -45,9 +70,13 @@ export default async function ProjectsPage({searchParams}: ProjectPageProps) {
           })}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-          {filtered.map((item) => (
+          {filtered.length > 0 ? filtered.map((item) => (
             <ProjectCard key={item.id} {...item} />
-          ))}
+          )) : (
+            <div className="col-span-1 md:col-span-2 lg:col-span-3 my-6">
+              <p className="text-center text-charcoal-700 tracking-wide">Project not found</p>
+            </div>
+          )}
         </div>
       </div>
       <div className="bg-[#76563D] px-6 sm:px-8 md:px-12 lg:px-20 py-8 md:py-10 relative">
