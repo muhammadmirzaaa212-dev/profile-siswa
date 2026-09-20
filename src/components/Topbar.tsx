@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { ImageIcon, Menu, X } from "lucide-react";
+import { ImageIcon, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Topbar() {
@@ -24,11 +24,19 @@ export default function Topbar() {
     },
   ];
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      setIsOpen(true);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-cream-200 bg-cream-50 px-4 py-3 backdrop-blur-sm sm:px-6 md:px-10 lg:px-16">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
           href="/"
+          onClick={handleLogoClick}
           className="group flex items-center gap-2"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brown-700 text-sm font-semibold text-white transition-transform duration-300 group-hover:-rotate-3">
@@ -70,25 +78,15 @@ export default function Topbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <Link
-            href="/gallery"
-            className="flex items-center justify-center gap-1.5 rounded-full border border-cream-300 bg-cream-100 px-3 py-1.5 text-brown-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brown-300 hover:bg-cream-200 sm:gap-2 sm:px-4 sm:py-2"
-          >
-            <ImageIcon size={15} />
-            <span className="text-xs sm:text-sm">
-              Gallery
-            </span>
-          </Link>
-
-          <button
-            onClick={() => setIsOpen(true)}
-            className="flex items-center justify-center rounded-lg p-2 text-brown-700 transition-colors duration-300 hover:bg-cream-200 md:hidden"
-            aria-label="Open menu"
-          >
-            <Menu size={20} />
-          </button>
-        </div>
+        <Link
+          href="/gallery"
+          className="flex items-center justify-center gap-1.5 rounded-full border border-cream-300 bg-cream-100 px-3 py-1.5 text-brown-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brown-300 hover:bg-cream-200 sm:gap-2 sm:px-4 sm:py-2"
+        >
+          <ImageIcon size={15} />
+          <span className="text-xs sm:text-sm">
+            Gallery
+          </span>
+        </Link>
       </div>
 
       <div
@@ -100,8 +98,8 @@ export default function Topbar() {
 
       {/* Mobile sidebar */}
       <aside
-        className={`fixed top-0 right-0 z-50 h-full w-64 border-l border-cream-200 bg-cream-50 px-6 py-5 shadow-xl transition-transform duration-300 md:hidden
-          ${isOpen ? "translate-x-0" : "translate-x-full"}
+        className={`fixed top-0 left-0 z-50 h-full w-64 border-r border-cream-200 bg-cream-50 px-6 py-5 shadow-xl transition-transform duration-300 md:hidden
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
         <div className="mb-8 flex items-center justify-between">
