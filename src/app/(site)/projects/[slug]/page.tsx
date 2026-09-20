@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { daftarProyek } from "@/data/proyek";
+import { supabase } from "../../../../../lib/supabase";
 
 interface DetailProps {
   params: Promise<{ slug: string }>;
@@ -10,6 +10,15 @@ interface DetailProps {
 
 export default async function DetailProyekPage({ params }: DetailProps) {
   const { slug } = await params;
+
+  const { data: daftarProyek, error } = await supabase
+    .from('projects')
+    .select('*')
+    .order('id',{ascending: true});
+
+  if (error) {
+    return <p className="text-red-600">Gagal memuat data: {error.message}</p>;
+  }
 
   const proyek = daftarProyek.find((p) => p.slug === slug);
 
@@ -73,12 +82,12 @@ export default async function DetailProyekPage({ params }: DetailProps) {
               Tools
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {proyek.tools.map((tool) => (
+              {proyek.tools.map((t: string) => (
                 <span
-                  key={tool}
+                  key={t}
                   className="rounded-full border border-brown-200 bg-cream-100 px-3 py-1.5 text-xs font-medium text-brown-700"
                 >
-                  {tool}
+                  {t}
                 </span>
               ))}
             </div>
