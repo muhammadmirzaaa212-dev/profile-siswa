@@ -1,5 +1,6 @@
 'use client';
 
+import { Dot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -49,7 +50,9 @@ export default function ProjectCard({
             <div key={tool} className="flex items-center gap-2">
               <span>{tool}</span>
               {index < tools.length - 1 && (
-                <span className="text-brown-500">•</span>
+                <span className="text-brown-500">
+                  <Dot/>
+                </span>
               )}
             </div>
           ))}

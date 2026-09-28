@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   CopyrightIcon,
@@ -11,29 +9,25 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
-import useInView from "@/components/UseInView";
+import { supabase } from "../../../lib/supabase";
 
-export default function HomePage() {
-  const [heroTextRef, heroTextInView] = useInView();
-  const [heroImageRef, heroImageInView] = useInView();
-  const [betweenRef, betweenInView] = useInView();
-  const [whatIDoTitleRef, whatIDoTitleInView] = useInView();
-  const [card1Ref, card1InView] = useInView();
-  const [card2Ref, card2InView] = useInView();
-  const [card3Ref, card3InView] = useInView();
-  const [projectsTitleRef, projectsTitleInView] = useInView();
-  const [project1Ref, project1InView] = useInView();
-  const [project2Ref, project2InView] = useInView();
-  const [stillLearningRef, stillLearningInView] = useInView();
+export default async function HomePage() {
+  const { data: daftarProyek, error } = await supabase
+    .from('projects')
+    .select('*')
+    .order('id', {ascending: true})
+    .limit(2);
+
+  if (error) {
+    return <p className="text-red-600">Gagal memuat data: {error.message}</p>;
+  }
 
   return (
     <div className="min-h-screen bg-cream-100 relative">
       <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 sm:my-16 md:my-20 lg:my-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-10">
           <div
-            ref={heroTextRef}
-            className={`flex flex-col gap-2 w-full md:w-1/2 transition-all duration-700 ease-out
-              ${heroTextInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="flex flex-col gap-2 w-full md:w-1/2 transition-all"
           >
             <p className="text-2xl sm:text-3xl text-charcoal-500">Hello, I'm</p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl text-charcoal-900 leading-tight tracking-wider">
@@ -63,9 +57,7 @@ export default function HomePage() {
             </div>
           </div>
           <div
-            ref={heroImageRef}
-            className={`relative w-full md:w-1/2 h-80 sm:h-96 md:h-105 lg:h-115 flex justify-center md:justify-end transition-all duration-700 ease-out delay-150
-              ${heroImageInView ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"}`}
+            className="relative w-full md:w-1/2 h-80 sm:h-96 md:h-105 lg:h-115 flex justify-center md:justify-end"
           >
             <Image
               src="/Mirza1.png"
@@ -79,9 +71,7 @@ export default function HomePage() {
       </div>
       <div className="bg-cream-200 p-8 sm:p-10 md:p-14 lg:p-20 flex flex-col items-center justify-center gap-6 md:gap-8 border relative">
         <div
-          ref={betweenRef}
-          className={`flex flex-col items-center gap-6 md:gap-8 transition-all duration-700 ease-out
-            ${betweenInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className="flex flex-col items-center gap-6 md:gap-8"
         >
           <div className="text-center">
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-charcoal-500 mb-2">
@@ -110,17 +100,13 @@ export default function HomePage() {
       </div>
       <div className="mx-6 sm:mx-10 md:mx-14 lg:mx-20 my-12 sm:my-14 md:my-15">
         <p
-          ref={whatIDoTitleRef}
-          className={`text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 mb-8 md:mb-10 transition-all duration-700 ease-out
-            ${whatIDoTitleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className="text-center font-semibold text-2xl sm:text-3xl md:text-4xl text-charcoal-900 mb-8 md:mb-10"
         >
           What I Do
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           <div
-            ref={card1Ref}
-            className={`px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-700 ease-out
-              ${card1InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all"
           >
             <p className="text-charcoal-900 font-medium tracking-wide">UI/UX Designer</p>
             <Image
@@ -135,9 +121,7 @@ export default function HomePage() {
             </p>
           </div>
           <div
-            ref={card2Ref}
-            className={`px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-700 ease-out delay-150
-              ${card2InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm"
           >
             <p className="text-charcoal-900 font-medium tracking-wide">Web Development</p>
             <Image
@@ -152,9 +136,7 @@ export default function HomePage() {
             </p>
           </div>
           <div
-            ref={card3Ref}
-            className={`px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-700 ease-out delay-300
-              ${card3InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm"
           >
             <p className="text-charcoal-900 font-medium tracking-wide">Literature</p>
             <Image
@@ -171,9 +153,7 @@ export default function HomePage() {
       </div>
       <div className="bg-cream-200 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 flex flex-col items-center justify-center gap-8 sm:gap-10">
         <div
-          ref={projectsTitleRef}
-          className={`text-center mb-4 transition-all duration-700 ease-out
-            ${projectsTitleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className="text-center mb-4"
         >
           <div className="text-center">
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-charcoal-500 mb-2">
@@ -185,51 +165,9 @@ export default function HomePage() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            ref={project1Ref}
-            className={`transition-all duration-700 ease-out
-              ${project1InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            <ProjectCard
-              id="1"
-              slug="manajemen-magang"
-              title="Manajemen Magang"
-              category="Web Development"
-              description="Manajemen Magang is a school-based web application developed as
-                part of the 2025 Software Engineering Industry Class. The
-                platform is designed to help schools manage student internship
-                activities, from data management to daily reporting. It features
-                three roles: Admin, Student, and Teacher. Admins manage the
-                system and its data, Students can search and apply for
-                internship placements (DUDI) and submit daily journals, while
-                Teachers review internship requests and approve students daily
-                journals."
-              image="/Magang.png"
-              tools={['Tailwind CSS', 'Next.js']}
-            />
-          </div>
-          <div
-            ref={project2Ref}
-            className={`transition-all duration-700 ease-out delay-150
-              ${project2InView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            <ProjectCard
-              id="2"
-              title="Pustaku"
-              slug="pustaku"
-              category="UI Design"
-              description="Pustaku is a library platform concept designed to connect
-                readers with registered libraries across Indonesia. Users can
-                search for books, check their availability, and choose which
-                library they want to borrow from. The platform features three
-                roles: Admin, Borrower, and Librarian. This project was
-                developed as a school assignment based on needs observed in my
-                surroundings and is currently in the UI/UX design stage using
-                Figma."
-              image="/Pustakuu.png"
-              tools={['Tailwind CSS', 'Next.js']}
-            />
-          </div>
+          {daftarProyek.map((item) => (
+            <ProjectCard key={item.id} {...item} />
+          ))}
         </div>
         <Link
           href="/projects"
@@ -244,9 +182,7 @@ export default function HomePage() {
       </div>
 
       <div
-        ref={stillLearningRef}
-        className={`py-20 sm:py-30 md:py-40 px-4 flex flex-col items-center justify-center gap-4 relative transition-all duration-700 ease-out
-          ${stillLearningInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className="py-20 sm:py-30 md:py-40 px-4 flex flex-col items-center justify-center gap-4 relative"
       >
         <div>
           <p className="text-center font-semibold text-xl sm:text-2xl md:text-3xl text-charcoal-900">

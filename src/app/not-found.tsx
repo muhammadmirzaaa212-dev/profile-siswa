@@ -2,20 +2,14 @@
 
 import Link from "next/link";
 import { Home, Compass, MoveLeft } from "lucide-react";
-import useInView from "@/components/UseInView";
 
 export default function NotFound() {
-  const [contentRef, contentInView] = useInView();
-
   return (
     <div className="min-h-screen bg-cream-100 flex items-center justify-center px-4 sm:px-8 relative overflow-hidden">
       <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-cream-200 opacity-60 blur-2xl" />
       <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#E1D0BC] opacity-40 blur-3xl" />
-
       <div
-        ref={contentRef}
-        className={`relative z-10 flex flex-col items-center text-center gap-6 max-w-lg transition-all duration-700 ease-out
-          ${contentInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className="relative z-10 flex flex-col items-center text-center gap-6 max-w-lg"
       >
         <div className="relative">
           <p className="text-[7rem] sm:text-[9rem] md:text-[11rem] font-bold leading-none text-charcoal-700 select-none">

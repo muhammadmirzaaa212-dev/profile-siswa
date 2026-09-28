@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { ImageIcon, X } from "lucide-react";
+import { ImageIcon, UserKey, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Topbar() {
@@ -79,13 +79,10 @@ export default function Topbar() {
         </nav>
 
         <Link
-          href="/gallery"
+          href="/admin/login"
           className="flex items-center justify-center gap-1.5 rounded-full border border-cream-300 bg-cream-100 px-3 py-1.5 text-brown-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brown-300 hover:bg-cream-200 sm:gap-2 sm:px-4 sm:py-2"
         >
-          <ImageIcon size={15} />
-          <span className="text-xs sm:text-sm">
-            Gallery
-          </span>
+          <UserKey size={15} />
         </Link>
       </div>
 
