@@ -106,7 +106,7 @@ export default async function HomePage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           <div
-            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all"
+            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
           >
             <p className="text-charcoal-900 font-medium tracking-wide">UI/UX Designer</p>
             <Image
@@ -121,7 +121,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div
-            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm"
+            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
           >
             <p className="text-charcoal-900 font-medium tracking-wide">Web Development</p>
             <Image
@@ -136,7 +136,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div
-            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm"
+            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
           >
             <p className="text-charcoal-900 font-medium tracking-wide">Literature</p>
             <Image

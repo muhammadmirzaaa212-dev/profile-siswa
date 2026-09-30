@@ -9,7 +9,7 @@ export default async function AdminProjectsPage() {
   const { data: daftarProyek } = await supabase
     .from("projects")
     .select("*")
-    .order("id", { ascending: true });
+    .order("id", { ascending: false });
 
   return (
     <div className="space-y-8">
