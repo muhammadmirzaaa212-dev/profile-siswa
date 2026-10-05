@@ -36,21 +36,21 @@ export default function ProjectCard({
         />
       </div>
       <div className="p-6">
-        <span className="text-xs font-medium uppercase tracking-[0.15em] text-brown-500">
+        <span className="text-xs font-medium uppercase tracking-[0.15em] text-charcoal-700">
           {category}
         </span>
-        <h3 className="mt-2 text-xl font-semibold text-stone-800">
+        <h3 className="mt-2 text-xl font-semibold text-charcoal-900">
           {title}
         </h3>
-        <p className="mt-3 text-sm leading-6 line-clamp-3 text-stone-600">
+        <p className="mt-3 text-sm leading-6 line-clamp-3 text-charcoal-700">
           {description}
         </p>
-        <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-stone-500">
+        <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-charcoal-600">
           {tools.map((tool, index) => (
             <div key={tool} className="flex items-center gap-2">
               <span>{tool}</span>
               {index < tools.length - 1 && (
-                <span className="text-brown-500">
+                <span className="text-charcoal-600">
                   <Dot/>
                 </span>
               )}

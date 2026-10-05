@@ -29,6 +29,7 @@ export default function NotFound() {
         <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
           <Link
             href="/"
+            aria-label="Back to home"
             className="px-6 py-3 rounded-2xl border border-[#E1D0BC] bg-[#EFE5D8] hover:bg-[#E1D0BC] hover:-translate-y-0.5 transition-all duration-300 text-[#76563D] flex items-center justify-center gap-2 font-medium"
           >
             <Home size={16} />

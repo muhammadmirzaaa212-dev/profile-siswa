@@ -60,6 +60,7 @@ export default async function ProjectsPage({searchParams}: ProjectPageProps) {
               <Link
                 key={cat}
                 href={href}
+                aria-label={`Filter category ${cat}`}
                 className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition ${
                   isActive ? 'bg-brown-600 text-white shadow-sm' : 'bg-white text-cream-800 border border-cream-200 hover:bg-cream-200'
                 }`}

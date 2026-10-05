@@ -80,6 +80,7 @@ export default function Topbar() {
 
         <Link
           href="/admin/login"
+          aria-label="Go to admin login"
           className="flex items-center justify-center gap-1.5 rounded-full border border-cream-300 bg-cream-100 px-3 py-1.5 text-brown-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brown-300 hover:bg-cream-200 sm:gap-2 sm:px-4 sm:py-2"
         >
           <UserKey size={15} />
