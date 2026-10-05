@@ -24,10 +24,6 @@ export const metadata: Metadata = {
     description: 'Portofolio siswa SMK Rekayasa Perangkat Lunak, dibangun dengan Next.js dan Supabase.',
     type: 'website',
   },
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
