@@ -32,10 +32,11 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="/Mirza1.png"
+              src="/Mirzzz.png"
               alt="Mirza"
               width={350}
               height={420}
+              priority
               className="relative z-10 w-52 sm:w-60 md:w-64 lg:w-72 h-72 sm:h-80 md:h-96 lg:h-105 object-cover rounded-xl rotate-3 hover:rotate-1 hover:scale-105 transition-all duration-500 shadow-sm"
             />
           </div>

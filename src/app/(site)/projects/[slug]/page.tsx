@@ -3,9 +3,32 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { supabase } from "../../../../../lib/supabase";
+import { Metadata } from "next";
 
 interface DetailProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: DetailProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { data: proyek } = await supabase
+    .from('proyek')
+    .select('title, description')
+    .eq('slug', slug)
+    .single();
+
+  if (!proyek) {
+    return { title: 'Project Not Found' };
+  }
+
+  return {
+    title: proyek.title,
+    description: proyek.description,
+    openGraph: {
+      title: proyek.title,
+      description: proyek.description,
+    },
+  };
 }
 
 export default async function DetailProyekPage({ params }: DetailProps) {

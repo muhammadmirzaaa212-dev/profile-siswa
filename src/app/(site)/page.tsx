@@ -60,10 +60,11 @@ export default async function HomePage() {
             className="relative w-full md:w-1/2 h-80 sm:h-96 md:h-105 lg:h-115 flex justify-center md:justify-end"
           >
             <Image
-              src="/Mirza1.png"
+              src="/Mirzzz.png"
               alt="Mirza"
               width={350}
               height={420}
+              priority
               className="relative z-10 w-52 sm:w-60 md:w-64 lg:w-72 h-72 sm:h-80 md:h-96 lg:h-105 object-cover rounded-xl rotate-3 hover:rotate-1 hover:scale-105 transition-all duration-500 shadow-sm"
             />
           </div>
