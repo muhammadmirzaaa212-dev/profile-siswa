@@ -9,7 +9,9 @@ export default function SiteLayout({
   return (
     <div className={`min-h-full flex flex-col`}>
       <Topbar/>
-      {children}
+      <main>
+        {children}
+      </main>
     </div>
   );
 }

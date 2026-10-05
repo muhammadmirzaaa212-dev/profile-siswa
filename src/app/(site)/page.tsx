@@ -24,7 +24,7 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-cream-100 relative">
-      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 my-12 sm:my-16 md:my-20 lg:my-25">
+      <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 py-12 sm:py-16 md:py-20 lg:py-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-10">
           <div
             className="flex flex-col gap-2 w-full md:w-1/2 transition-all"

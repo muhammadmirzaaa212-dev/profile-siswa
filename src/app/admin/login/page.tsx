@@ -19,6 +19,7 @@ export default async function AdminLoginPage({
   searchParams: Promise<{ error?: string }>;
 }) {
   const params = await searchParams;
+  
   return (
     <main className="min-h-screen flex items-center justify-center bg-cream-100">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm">

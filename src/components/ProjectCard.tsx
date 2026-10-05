@@ -39,12 +39,12 @@ export default function ProjectCard({
         <span className="text-xs font-medium uppercase tracking-[0.15em] text-charcoal-700">
           {category}
         </span>
-        <h3 className="mt-2 text-xl font-semibold text-charcoal-900">
+        <h1 className="mt-2 text-xl font-semibold text-charcoal-900">
           {title}
-        </h3>
-        <p className="mt-3 text-sm leading-6 line-clamp-3 text-charcoal-700">
+        </h1>
+        <h2 className="mt-3 text-sm leading-6 line-clamp-3 text-charcoal-700">
           {description}
-        </p>
+        </h2>
         <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-charcoal-600">
           {tools.map((tool, index) => (
             <div key={tool} className="flex items-center gap-2">
@@ -58,7 +58,7 @@ export default function ProjectCard({
           ))}
         </div>
         <div className={`mt-5 ${pathname == '/' ? 'hidden' : 'block'}`}>
-          <Link href={`/projects/${slug}`} className="text-sm font-medium text-brown-700 transition-colors hover:text-brown-900">
+          <Link href={`/projects/${slug}`} aria-label={`Detail project ${slug}`} className="text-sm font-medium text-brown-700 transition-colors hover:text-brown-900">
             View Project &rarr;
           </Link>
         </div>

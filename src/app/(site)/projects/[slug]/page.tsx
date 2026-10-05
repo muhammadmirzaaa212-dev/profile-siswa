@@ -54,7 +54,7 @@ export default async function DetailProyekPage({ params }: DetailProps) {
       <div className="mx-auto max-w-6xl">
         <Link
           href="/projects"
-          className="group inline-flex items-center gap-2 text-sm font-medium text-stone-500 transition-colors hover:text-brown-700"
+          className="group inline-flex items-center gap-2 text-sm font-medium text-charcoal-500 transition-colors hover:text-brown-700"
         >
           <ArrowLeft
             size={16}
@@ -63,18 +63,18 @@ export default async function DetailProyekPage({ params }: DetailProps) {
           Back to Projects
         </Link>
       </div>
-      <article className="mx-auto mt-8 max-w-6xl overflow-hidden rounded-3xl border border-brown-200 bg-cream-50 shadow-sm">
+      <article className="mx-auto mt-8 max-w-6xl overflow-hidden rounded-3xl border border-brown-200 bg-cream-50 shadow-md">
         <div className="px-6 py-8 sm:px-10 sm:py-10 md:px-14">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span className="text-xs font-medium uppercase tracking-[0.18em] text-brown-500">
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-charcoal-700">
               {proyek.category}
             </span>
             <span className="h-1 w-1 rounded-full bg-brown-300" />
-            <span className="text-xs font-mono text-stone-400">
+            <span className="text-xs font-mono text-charcoal-600">
               #{proyek.id}
             </span>
           </div>
-          <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-stone-800 sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-charcoal-900 sm:text-5xl md:text-6xl">
             {proyek.title}
           </h1>
         </div>
@@ -84,31 +84,32 @@ export default async function DetailProyekPage({ params }: DetailProps) {
               src={proyek.image}
               alt={proyek.title}
               fill
+              priority
               className="object-cover transition-transform duration-700 hover:scale-[1.02]"
             />
           </div>
         </div>
         <div className="grid gap-10 px-6 py-10 sm:px-10 md:grid-cols-[1fr_280px] md:px-14 md:py-14">
           <section>
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-brown-500">
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-charcoal-700">
               About the Project
             </p>
-            <h2 className="text-2xl font-semibold text-stone-800 sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-charcoal-800 sm:text-3xl">
               Background & Solution
             </h2>
-            <p className="mt-5 max-w-3xl text-sm leading-7 text-stone-600 sm:text-base">
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-charcoal-600 sm:text-base">
               {proyek.description}
             </p>
           </section>
           <aside className="md:border-l md:border-brown-200 md:pl-8">
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-brown-500">
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-charcoal-700">
               Tools
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {proyek.tools.map((t: string) => (
                 <span
                   key={t}
-                  className="rounded-full border border-brown-200 bg-cream-100 px-3 py-1.5 text-xs font-medium text-brown-700"
+                  className="rounded-full border border-brown-300 bg-cream-100 px-3 py-1.5 text-xs font-medium text-brown-800"
                 >
                   {t}
                 </span>
@@ -117,7 +118,7 @@ export default async function DetailProyekPage({ params }: DetailProps) {
           </aside>
         </div>
         <div className="flex flex-col gap-4 border-t border-brown-200 bg-cream-100 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 md:px-14">
-          <p className="text-xs text-stone-500">
+          <p className="text-xs text-charcoal-500">
             Project #{proyek.id}
           </p>
           <Link

@@ -6,7 +6,7 @@ async function logoutAction() {
   "use server";
   const supabase = await createSupabaseServerClient();
   await supabase.auth.signOut();
-  redirect("/admin/login");
+  redirect("/");
 }
 
 export default async function AdminLayout({
