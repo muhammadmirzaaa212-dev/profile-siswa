@@ -27,7 +27,14 @@ export async function generateMetadata({ params }: DetailProps): Promise<Metadat
     openGraph: {
       title: proyek.title,
       description: proyek.description,
-      images: [proyek.image]
+      images: [
+        {
+          url: proyek.image,
+          width: 1200,
+          height: 630,
+          alt: proyek.title,
+        },
+      ],
     },
   };
 }
