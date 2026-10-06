@@ -20,7 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://profile-mirza.vercel.app/'),
+  metadataBase: new URL('https://profile-mirza.my.id/'),
   title: {
     default: 'Mirza - Website Profil & Portfolio',
     template: '%s | Mirza',

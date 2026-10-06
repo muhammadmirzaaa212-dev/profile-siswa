@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { supabase } from '../../lib/supabase';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const BASE_URL = 'https://profile-mirza.vercel.app/';
+  const BASE_URL = 'https://profile-mirza.my.id/';
   const { data: daftarProyek } = await supabase
     .from('projects')
     .select('id');
