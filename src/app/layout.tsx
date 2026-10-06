@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Mirza - Website Profil & Portfolio',
     description: 'Portofolio siswa SMK Rekayasa Perangkat Lunak, dibangun dengan Next.js dan Supabase.',
     type: 'website',
-    images: ['/Opengraph.png']
+    images: ["/Opengraph.png"]
   },
 };
 
