@@ -12,8 +12,8 @@ interface DetailProps {
 export async function generateMetadata({ params }: DetailProps): Promise<Metadata> {
   const { slug } = await params;
   const { data: proyek } = await supabase
-    .from('proyek')
-    .select('title, description')
+    .from('projects')
+    .select('title, description, image')
     .eq('slug', slug)
     .single();
 
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: DetailProps): Promise<Metadat
     openGraph: {
       title: proyek.title,
       description: proyek.description,
+      images: [proyek.image]
     },
   };
 }
