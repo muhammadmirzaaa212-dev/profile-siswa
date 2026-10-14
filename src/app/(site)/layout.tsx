@@ -1,4 +1,3 @@
-import "@/app/globals.css"
 import Topbar from "@/components/Topbar";
 
 export default function SiteLayout({

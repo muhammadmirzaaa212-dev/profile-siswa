@@ -10,20 +10,32 @@ import Link from "next/link";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
 import { supabase } from "../../../lib/supabase";
+import InteractiveBackground from "../../components/InteractiveBackground";
 
 export default async function HomePage() {
-  const { data: daftarProyek, error } = await supabase
+  const { data: daftarProyek, error: errorProyek } = await supabase
     .from('projects')
     .select('*')
     .order('id', {ascending: true})
     .limit(2);
 
-  if (error) {
-    return <p className="text-red-600">Gagal memuat data: {error.message}</p>;
+  if (errorProyek) {
+    return <p className="text-red-600">Gagal memuat data: {errorProyek.message}</p>;
+  }
+
+  const { data: daftarSkill, error: errorSkill } = await supabase
+    .from('skills')
+    .select('*')
+    .eq('part', 'What I Do')
+    .order('id', {ascending: true})
+
+  if (errorSkill) {
+    return <p className="text-red-600">Gagal memuat data: {errorSkill.message}</p>;
   }
 
   return (
     <div className="min-h-screen bg-cream-100 relative">
+      <InteractiveBackground/>
       <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 py-12 sm:py-16 md:py-20 lg:py-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-10">
           <div
@@ -106,50 +118,23 @@ export default async function HomePage() {
           What I Do
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          <div
-            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
-          >
-            <p className="text-charcoal-900 font-medium tracking-wide">UI/UX Designer</p>
-            <Image
-              src="/UI-UX Designer.png"
-              alt="UI/UX"
-              width={200}
-              height={200}
-            />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
-              Designing interfaces that are simple, clear, and comfortable to
-              use.
-            </p>
-          </div>
-          <div
-            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
-          >
-            <p className="text-charcoal-900 font-medium tracking-wide">Web Development</p>
-            <Image
-              src="/Web Development.png"
-              alt="Web"
-              width={200}
-              height={200}
-            />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
-              Building websites and turning ideas into functional digital
-              experiences.
-            </p>
-          </div>
-          <div
-            className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
-          >
-            <p className="text-charcoal-900 font-medium tracking-wide">Literature</p>
-            <Image
-              src="/Literature.png"
-              alt="Literature"
-              width={200}
-              height={200}
-            />
-            <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
-              Exploring ideas and emotions through writing and stories.
-            </p>
-          </div>
+          {daftarSkill.map((item) => (
+            <div
+              key={item.id}
+              className="px-4 py-8 rounded-lg bg-white border border-[#E7DED4] flex flex-col items-center justify-center gap-4 hover:-translate-y-2 hover:shadow-sm transition-all duration-500"
+            >
+              <p className="text-charcoal-900 font-medium tracking-wide">{item.title}</p>
+              <Image
+                src={item.image}
+                alt={item.image_alt}
+                width={200}
+                height={200}
+              />
+              <p className="text-center max-w-75 text-sm sm:text-base leading-relaxed text-charcoal-600">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
       <div className="bg-cream-200 px-4 sm:px-8 md:px-20 py-12 sm:py-16 md:py-20 flex flex-col items-center justify-center gap-8 sm:gap-10">

@@ -12,10 +12,12 @@ import {
   User,
 } from "lucide-react";
 import Image from "next/image";
+import InteractiveBackground from "@/components/InteractiveBackground";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-cream-100">
+      <InteractiveBackground/>
       <div className="mx-6 sm:mx-10 md:mx-16 lg:mx-30 py-12 sm:py-16 md:py-20 lg:py-25">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-10">
           <div>
