@@ -16,7 +16,7 @@ export default async function HomePage() {
   const { data: daftarProyek, error: errorProyek } = await supabase
     .from('projects')
     .select('*')
-    .order('id', {ascending: true})
+    .order('id', {ascending: false})
     .limit(2);
 
   if (errorProyek) {

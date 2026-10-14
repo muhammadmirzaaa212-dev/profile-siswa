@@ -45,7 +45,7 @@ export default async function DetailProyekPage({ params }: DetailProps) {
   const { data: daftarProyek, error } = await supabase
     .from('projects')
     .select('*')
-    .order('id',{ascending: true});
+    .order('id',{ascending: false});
 
   if (error) {
     return <p className="text-red-600">Gagal memuat data: {error.message}</p>;
